@@ -1,0 +1,410 @@
+---
+subcategory: "FortiWEB WAF"
+layout: "fortiweb"
+page_title: "FortiWEB: fortiweb_waf_http_protocol_parameter_restriction"
+description: |-
+  Configure FortiWEB waf http protocol parameter restriction configuration.
+---
+
+# fortiweb_waf_http_protocol_parameter_restriction
+Configure FortiWEB waf http protocol parameter restriction configuration.
+
+## Example Usage
+```hcl
+resource "fortiweb_waf_http_protocol_parameter_restriction" "test" {
+	mkey = "test"
+	exception_name = "test"
+	max_http_content_length_check = "enable"
+	max_http_content_length = 16384
+	max_http_content_length_action = "alert"
+	max_http_content_length_block_period = 600
+	max_http_content_length_severity = "Low"
+	max_http_content_length_threat_weight = "moderate"
+	max_http_content_length_trigger = ""
+	illegal_content_length_check = "enable"
+	illegal_content_length_check_action = "alert"
+	illegal_content_length_check_block_period = 600
+	illegal_content_length_check_severity = "Medium"
+	illegal_content_length_check_threat_weight = "substantial"
+	illegal_content_length_check_trigger = ""
+	cl_te_coexist_check = "enable"
+	cl_te_coexist_action = "alert"
+	cl_te_coexist_block_period = 600
+	cl_te_coexist_severity = "Low"
+	cl_te_coexist_threat_weight = "moderate"
+	cl_te_coexist_trigger = ""
+	inconsistent_cl_check = "enable"
+	inconsistent_cl_action = "alert"
+	inconsistent_cl_block_period = 600
+	inconsistent_cl_severity = "Low"
+	inconsistent_cl_threat_weight = "moderate"
+	inconsistent_cl_trigger = ""
+	max_http_header_length_check = "enable"
+	max_http_header_length = 8192
+	max_http_header_length_action = "alert"
+	max_http_header_length_block_period = 600
+	max_http_header_length_severity = "Low"
+	max_http_header_length_threat_weight = "moderate"
+	max_http_header_length_trigger = ""
+	max_http_header_name_length_check = "enable"
+	max_http_header_name_length = 50
+	max_http_header_name_length_action = "alert"
+	max_http_header_name_length_block_period = 600
+	max_http_header_name_length_severity = "Low"
+	max_http_header_name_length_threat_weight = "moderate"
+	max_http_header_name_length_trigger = ""
+	max_http_header_value_length_check = "enable"
+        max_http_header_value_length = 4096
+        max_http_header_value_length_action = "alert"
+        max_http_header_value_length_block_period = 600
+        max_http_header_value_length_severity = "Low"
+        max_http_header_value_length_threat_weight = "moderate"
+        max_http_header_value_length_trigger = ""
+	illegal_header_name_check = "enable"
+	illegal_header_name_check_action = "alert_deny"
+	illegal_header_name_check_block_period = 600
+	illegal_header_name_check_severity = "Medium"
+	illegal_header_name_check_threat_weight = "substantial"
+	illegal_header_name_check_trigger = ""
+	illegal_header_value_check = "enable"
+        illegal_header_value_check_action = "alert_deny"
+        illegal_header_value_check_block_period = 600
+        illegal_header_value_check_severity = "Medium"
+        illegal_header_value_check_threat_weight = "substantial"
+        illegal_header_value_check_trigger = ""
+	redundant_header_check = "enable"
+	redundant_header_action = "alert"
+	redundant_header_block_period = 600
+	redundant_header_severity = "Medium"
+	redundant_header_threat_weight = "substantial"
+	redundant_header_trigger = ""
+	max_url_parameter_length_check = "enable"
+	max_url_parameter_length = 8192
+	max_url_parameter_length_action = "alert"
+	max_url_parameter_length_block_period = 600
+	max_url_parameter_length_severity = "Low"
+	max_url_parameter_length_threat_weight = "moderate"
+	max_url_parameter_length_trigger = ""
+	max_http_body_parameter_length_check = "enable"
+        max_http_body_parameter_length = 8192
+        max_http_body_parameter_length_action = "alert"
+        max_http_body_parameter_length_block_period = 600
+        max_http_body_parameter_length_severity = "Low"
+        max_http_body_parameter_length_threat_weight = "informational"
+        max_http_body_parameter_length_trigger = ""
+	max_url_parameter_check = "enable"
+	max_url_parameter = 128
+	max_url_parameter_action = "alert"
+	max_url_parameter_block_period = 600
+	max_url_parameter_severity = "Low"
+	max_url_parameter_threat_weight = "moderate"
+	max_url_parameter_trigger = ""
+	parameter_name_check = "enable"
+	parameter_name_check_action = "alert"
+        parameter_name_check_block_period = 600
+        parameter_name_check_severity = "Low"
+        parameter_name_check_threat_weight = "moderate"
+        parameter_name_check_trigger = ""
+	parameter_value_check = "enable"
+	parameter_value_check_action = "alert"
+	parameter_value_check_block_period = 600
+	parameter_value_check_severity = "Low"
+	parameter_value_check_threat_weight = "moderate"
+	parameter_value_check_trigger = ""
+	max_url_param_name_len_check = "enable"
+	max_url_param_name_len = 4096
+	max_url_param_name_len_action = "alert"
+	max_url_param_name_len_block_period = 600
+	max_url_param_name_len_severity = "Low"
+	max_url_param_name_len_threat_weight = "moderate"
+	max_url_param_name_len_trigger = ""
+	max_url_param_value_len_check = "enable"
+	max_url_param_value_len = 4096
+        max_url_param_value_len_action = "alert"
+        max_url_param_value_len_block_period = 600
+        max_url_param_value_len_severity = "Low"
+        max_url_param_value_len_threat_weight = "moderate"
+        max_url_param_value_len_trigger = ""
+	url_param_name_check = "enable"
+	url_param_name_check_action = "alert"
+	url_param_name_check_block_period = 600
+	url_param_name_check_severity = "Medium"
+	url_param_name_check_threat_weight = "substantial"
+	url_param_name_check_trigger = ""
+	url_param_value_check = "enable"
+	url_param_value_check_action = "alert"
+        url_param_value_check_block_period = 600
+        url_param_value_check_severity = "Medium"
+        url_param_value_check_threat_weight = "substantial"
+        url_param_value_check_trigger = ""
+	duplicate_paramname_check = "enable"
+	duplicate_paramname_action = "alert"
+	duplicate_paramname_block_period = 600
+	duplicate_paramname_severity = "Low"
+	duplicate_paramname_threat_weight = "informational"
+	duplicate_paramname_trigger = ""
+	illegal_http_request_method_check = "enable"
+	illegal_http_request_method_action = "alert_deny"
+	illegal_http_request_method_block_period = 600
+	illegal_http_request_method_severity = "Medium"
+	illegal_http_request_method_threat_weight = "severe"
+	illegal_http_request_method_trigger = ""
+	max_http_request_filename_length_check = "enable"
+	max_http_request_filename_length = 2048
+	max_http_request_filename_length_action = "alert"
+	max_http_request_filename_length_block_period = 600
+	max_http_request_filename_length_severity = "Low"
+	max_http_request_filename_length_threat_weight = "moderate"
+	max_http_request_filename_length_trigger = ""
+	max_http_request_length_check = "enable"
+	max_http_request_length = 2048
+        max_http_request_length_action = "alert"
+        max_http_request_length_block_period = 600
+        max_http_request_length_severity = "Low"
+        max_http_request_length_threat_weight = "moderate"
+        max_http_request_length_trigger = ""
+	max_header_line_request_check = "enable"
+	max_header_line_request = 64
+	max_header_line_request_action = "alert"
+	max_header_line_request_block_period = 600
+	max_header_line_request_severity = "Low"
+	max_header_line_request_threat_weight = "moderate"
+	max_header_line_request_trigger = ""
+	post_request_ctype_check = "enable"
+	post_request_ctype_check_action = "alert"
+	post_request_ctype_check_block_period = 600
+	post_request_ctype_check_severity = "Low"
+	post_request_ctype_check_threat_weight = "substantial"
+	post_request_ctype_check_trigger = ""
+	missing_host_check = "enable"
+	missing_host_action = "alert"
+	missing_host_block_period = 600
+	missing_host_severity = "Medium"
+	missing_host_threat_weight = "substantial"
+	missing_host_trigger = ""
+	null_byte_in_url_check = "enable"
+	null_byte_in_url_action = "alert"
+	null_byte_in_url_block_period = 600
+	null_byte_in_url_severity = "Medium"
+	null_byte_in_url_threat_weight = "severe"
+	null_byte_in_url_trigger = ""
+	illegal_byte_in_url_check = "enable"
+	illegal_byte_in_url_action = "alert"
+        illegal_byte_in_url_block_period = 600
+        illegal_byte_in_url_severity = "Medium"
+        illegal_byte_in_url_threat_weight = "severe"
+        illegal_byte_in_url_trigger = ""
+	odd_and_even_space_attack_check = "enable"
+	odd_and_even_space_attack_action = "alert"
+	odd_and_even_space_attack_block_period = 600
+	odd_and_even_space_attack_severity = "Medium"
+	odd_and_even_space_attack_weight = "severe"
+	odd_and_even_space_attack_trigger = ""
+	malformed_url_check = "enable"
+	malformed_url_action = "alert"
+        malformed_url_block_period = 600
+        malformed_url_severity = "Medium"
+        malformed_url_weight = "severe"
+        malformed_url_trigger = ""
+	max_setting_header_table_size_check = "enable"
+	max_setting_header_table_size = 65535
+	max_setting_header_table_size_action = "alert"
+	max_setting_header_table_size_block_period = 600
+	max_setting_header_table_size_severity = "Low"
+	max_setting_header_table_size_threat_weight = "moderate"
+	max_setting_header_table_size_trigger = ""
+	max_setting_current_streams_num_check = "enable"
+	max_setting_current_streams_num = 1000
+	max_setting_current_streams_num_action = "alert"
+	max_setting_current_streams_num_block_period = 600
+	max_setting_current_streams_num_severity = "Low"
+	max_setting_current_streams_num_threat_weight = "moderate"
+	max_setting_current_streams_num_trigger = ""
+	max_setting_initial_window_size_check = "enable"
+	max_setting_initial_window_size = 33554432
+	max_setting_initial_window_size_action = "alert"
+	max_setting_initial_window_size_block_period = 600
+	max_setting_initial_window_size_severity = "Low"
+	max_setting_initial_window_size_threat_weight = "moderate"
+	max_setting_initial_window_size_trigger = ""
+	max_setting_frame_size_check = "enable"
+	max_setting_frame_size = 4194303
+	max_setting_frame_size_action = "alert"
+	max_setting_frame_size_block_period = 600
+	max_setting_frame_size_severity = "Low"
+	max_setting_frame_size_threat_weight = "moderate"
+	max_setting_frame_size_trigger = ""
+	max_setting_header_list_size_check = "enable"
+	max_setting_header_list_size = 65535
+	max_setting_header_list_size_action = "alert"
+	max_setting_header_list_size_block_period = 600
+	max_setting_header_list_size_severity = "Low"
+	max_setting_header_list_size_threat_weight = "moderate"
+	max_setting_header_list_size_trigger = ""
+	http2_max_requests_check = "enable"
+	http2_max_requests = 1000
+	http2_max_requests_action = "alert"
+	http2_max_requests_block_period = 600
+	http2_max_requests_severity = "Low"
+	http2_max_requests_threat_weight = "moderate"
+	http2_max_requests_trigger = ""
+	h2_rst_stream_check = "enable"
+	h2_rst_stream = 50
+	h2_rst_stream_action = "block-period"
+	h2_rst_stream_block_period = 600
+	h2_rst_stream_severity = "High"
+	h2_rst_stream_threat_weight = "critical"
+	h2_rst_stream_trigger = ""
+	h2_rst_stream_freq_check = "enable"
+	h2_rst_stream_freq = 5
+	h2_rst_stream_freq_action = "block-period"
+	h2_rst_stream_freq_block_period = 600
+	h2_rst_stream_freq_severity = "High"
+	h2_rst_stream_freq_threat_weight = "critical"
+	h2_rst_stream_freq_trigger = ""
+	h3_max_table_capacity_check = "enable"
+	h3_max_table_capacity = 65535
+	h3_max_table_capacity_action = "alert"
+	h3_max_table_capacity_block_period = 600
+	h3_max_table_capacity_severity = "Low"
+	h3_max_table_capacity_threat_weight = "moderate"
+	h3_max_table_capacity_trigger = ""
+	h3_max_field_section_size_check = "enable"
+	h3_max_field_section_size = 131070
+	h3_max_field_section_size_action = "alert"
+	h3_max_field_section_size_block_period = 600
+	h3_max_field_section_size_severity = "Low"
+	h3_max_field_section_size_threat_weight = "moderate"
+	h3_max_field_section_size_trigger = ""
+	h3_block_streams_check = "enable"
+	h3_block_streams = 50
+	h3_block_streams_action = "alert"
+	h3_block_streams_block_period = 600
+	h3_block_streams_severity = "Low"
+	h3_block_streams_threat_weight = "moderate"
+	h3_block_streams_trigger = ""
+	h3_bidir_concurrent_stream_check = "enable"
+	h3_bidir_concurrent_stream = 100
+	h3_bidir_concurrent_stream_action = "alert"
+	h3_bidir_concurrent_stream_block_period = 600
+	h3_bidir_concurrent_stream_severity = "Low"
+	h3_bidir_concurrent_stream_threat_weight = "moderate"
+	h3_bidir_concurrent_stream_trigger = ""
+	h3_unidir_concurrent_stream_check = "enable"
+	h3_unidir_concurrent_stream = 100
+	h3_unidir_concurrent_stream_action = "alert"
+	h3_unidir_concurrent_stream_block_period = 600
+	h3_unidir_concurrent_stream_severity = "Low"
+	h3_unidir_concurrent_stream_threat_weight = "moderate"
+	h3_unidir_concurrent_stream_trigger = ""
+	illegal_content_type_check = "enable"
+	illegal_content_type_check_action = "alert"
+	illegal_content_type_check_block_period = 600
+	illegal_content_type_check_severity = "Low"
+	illegal_content_type_check_threat_weight = "moderate"
+	illegal_content_type_check_trigger = ""
+	illegal_response_code_check = "enable"
+	illegal_response_code_check_action = "alert"
+	illegal_response_code_check_block_period = 600
+	illegal_response_code_check_severity = "Medium"
+	illegal_response_code_check_threat_weight = "severe"
+	illegal_response_code_check_trigger = ""
+	illegal_host_name_check = "enable"
+	illegal_host_name_check_action = "alert_deny"
+	illegal_host_name_check_block_period = 600
+	illegal_host_name_check_severity = "Medium"
+	illegal_host_name_check_threat_weight = "substantial"
+	illegal_host_name_check_trigger = ""
+	illegal_http_version_check = "enable"
+	illegal_http_version_check_action = "alert"
+	illegal_http_version_check_block_period = 600
+	illegal_http_version_check_severity = "Medium"
+	illegal_http_version_threat_weight = "severe"
+	illegal_http_version_check_trigger = ""
+	max_http_body_length_check = "enable"
+	max_http_body_length = 16384
+	max_http_body_length_action = "alert"
+	max_http_body_length_block_period = 600
+	max_http_body_length_severity = "Low"
+	max_http_body_length_threat_weight = "informational"
+	max_http_body_length_trigger = ""
+	max_cookie_in_request_check = "enable"
+	max_cookie_in_request = 128
+	max_cookie_in_request_action = "alert"
+	max_cookie_in_request_block_period = 600
+	max_cookie_in_request_severity = "Low"
+	max_cookie_in_request_threat_weight = "moderate"
+	max_cookie_in_request_trigger = ""
+	number_of_ranges_in_range_header_check = "enable"
+	number_of_ranges_in_range_header = 5
+	number_of_ranges_in_range_header_action = "alert"
+	number_of_ranges_in_range_header_block_period = 600
+	number_of_ranges_in_range_header_severity = "Low"
+	number_of_ranges_in_range_header_threat_weight = "moderate"
+	number_of_ranges_in_range_header_trigger = ""
+	block_malformed_request_check = "enable"
+	block_malformed_request_action = "alert_deny"
+	block_malformed_request_block_period = 600
+	block_malformed_request_severity = "Medium"
+	block_malformed_request_threat_weight = "substantial"
+	block_malformed_request_trigger = ""
+	rpc_protocol_check = "enable"
+	rpc_protocol_action = "alert"
+	rpc_protocol_block_period = 600
+	rpc_protocol_severity = "Low"
+	rpc_protocol_threat_weight = "substantial"
+	rpc_protocol_trigger = ""
+	web_socket_protocol_check = "enable"
+	web_socket_protocol_action = "alert"
+	web_socket_protocol_block_period = 600
+	web_socket_protocol_severity = "Low"
+	web_socket_protocol_threat_weight = "moderate"
+	web_socket_protocol_trigger = ""
+	chunk_size_check = "enable"
+	chunk_size_action = "alert"
+	chunk_size_block_period = 600
+	chunk_size_severity = "Low"
+	chunk_size_weight = "severe"
+	chunk_size_trigger = ""
+	range_overlapping_check = "enable"
+	range_overlapping_action = "alert"
+	range_overlapping_block_period = 600
+	range_overlapping_severity = "Low"
+	range_overlapping_threat_weight = "substantial"
+	range_overlapping_trigger = ""
+	multipart_formdata_bad_request_check = "enable"
+	multipart_formdata_bad_request_action = "alert"
+	multipart_formdata_bad_request_block_period = 600
+	multipart_formdata_bad_request_severity = "Low"
+	multipart_formdata_bad_request_threat_weight = "substantial"
+	multipart_formdata_bad_request_trigger = ""
+}
+
+```
+
+## Argument Reference
+
+The following arguments are supported:
+
+* `vdom` - Specifies the vdom to which the data source will be applied when the FortiWEB unit is running in VDOM mode. Only one vdom can be specified. If you want to inherit the vdom configuration of the provider, please do not set this parameter.
+* `mkey` - The name of the waf http protocol parameter restriction entry.
+* `exception_name` - The name of a new or existing HTTP protocol constraint exception. 
+* `<constraint_name>_check` - Specify whether FortiWeb includes the specified constraint when it applies this set of constraints. 
+* `<constraint_name>_length` - Set the threat severity in response to invalid Content-Length: header value. The name changes according to <constraint_name>. Please note the special cases.
+* `<constraint_name>_length_action` - Select one of the following actions that the FortiWeb appliance will perform when an HTTP request violates one of the rules. Valid values: alert, alert_deny, block-period, deny_no_log, client-id-block-period.
+* `<constraint_name>_block_period` - Block subsequent requests from the client's IP address for a number of seconds.
+* `<constraint_name>_severity` - Select the severity level to use in logs and reports generated when a violation of the rule occurs. Valid values: High, Medium, Low, Info.
+* `<constraint_name>_threat_weight` - Set the threat weight for an event when FortiWeb detects a violation of a parameter restriction rule. Valid values: low, critical, informational, moderate, substantial, severe.
+* `<constraint_name>_trigger` - Enter the name of the trigger to apply when this rule is violated.
+
+## Attribute Reference
+
+In addition to all the above arguments, the following attributes are exported:
+* `id` - an identifier for the resource with format {{mkey}}.
+
+## Import
+
+Waf Http Protocol Parameter Restriction can be imported using any of these accepted formats:
+```
+$ terraform import fortiweb_waf_http_protocol_parameter_restriction.labelname {mkey}
+```
